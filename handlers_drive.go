@@ -370,7 +370,7 @@ func getOauthClient(args cli.Arguments) (*http.Client, error) {
 
 	credsPath := ConfigFilePath(configDir, OauthCredentialsFilename)
 	if args.String("oauthCredentials") != "" {
-		credsPath = args.String("oauthCrendentials")
+		credsPath = args.String("oauthCredentials")
 	}
 	clientId, clientSecret, err := getOauthAppCredentials(credsPath)
 	if err != nil {
